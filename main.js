@@ -67,12 +67,10 @@ function main() {
   // Bind it to ARRAY_BUFFER (think of it as ARRAY_BUFFER = positionBuffer)
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
-  const positions = [
-    0.0, 0.0 //circle center vertex
-  ];
+  const positions = [];
 
-  const stops = 360;
-  const r = 5;
+  const stops = 10; //how many sides the polygon has
+  const r = 2; //half the width of the polygon (radius for circle)
 
   for (i = 0; i <= stops; i++){
     positions.push(r * Math.cos(i * 2 * Math.PI/stops)); // x coord
